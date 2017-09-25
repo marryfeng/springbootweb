@@ -1,0 +1,22 @@
+#端口
+server:
+  port: 9001
+#微服务标志
+spring:
+  application:
+    name: springboot-service02
+  datasource:
+    url: jdbc:mysql://localhost:3306/student
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+
+#mapper的地方
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.springboot.project.entity
+#将服务注册到注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/

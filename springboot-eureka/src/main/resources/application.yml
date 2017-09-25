@@ -1,0 +1,16 @@
+#微服务的唯一标志
+spring:
+  application:
+    name: springboot-eureka
+#端口
+server:
+  port: 8000
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
