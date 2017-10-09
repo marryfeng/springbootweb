@@ -10,6 +10,14 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
+  #这里配置不配置都可以，默认是自动读取templates中的内容，如果改变了，需要配置下
+  thymeleaf:
+     mode: HTML5
+     prefix: classpath:/templates/
+     cache: false
+     suffix: .html
+     encoding: utf-8
+     content-type: text/html
 
 #mapper的地方
 mybatis:
@@ -20,11 +28,4 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
-
-
-
-
-
-
-
 
