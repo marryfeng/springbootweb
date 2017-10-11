@@ -18,6 +18,13 @@ spring:
      suffix: .html
      encoding: utf-8
      content-type: text/html
+  mail:
+    host: smtp.163.com
+    username: marryfeng9998@163.com
+    password: marryfeng9998
+    port: 25
+    protocol: smtp
+    default-encoding: utf-8
 
 #mapper的地方
 mybatis:
@@ -28,4 +35,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
+
 
